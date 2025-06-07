@@ -114,20 +114,20 @@ SELECT SUM(totalamount)
 FROM orders
 GROUP BY customer_id;
 
-SELECT product_id,SUM(Quantity)
-FROM OrderDetails
+SELECT product_id,SUM(quantity)
+FROM orderdetails
 GROUP BY product_id
-ORDER BY SUM(Quantity) DESC
+ORDER BY SUM(quantity) DESC
 LIMIT 1;
 
 SELECT customer_id, AVG(totalamount)
 FROM orders
 GROUP BY customer_id;
 
-SELECT products.category,SUM(OrderDetails.Price)
-FROM OrderDetails
+SELECT products.category,SUM(orderdetails.Price)
+FROM orderdetails
 JOIN products
-ON OrderDetails.product_id=products.product_id
+ON orderdetails.product_id=products.product_id
 GROUP BY products.category;
 
 --Subqueries
@@ -145,7 +145,7 @@ SELECT product_id
 FROM products
 WHERE product_id NOT IN
 (SELECT DISTINCT product_id
-FROM OrderDetails); 
+FROM orderdetails); 
 
 SELECT customer_id,MAX(orderdate)
 FROM orders
