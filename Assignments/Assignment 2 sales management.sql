@@ -64,21 +64,19 @@ INSERT INTO orderdetails (order_id, product_id, quantity, price) VALUES
 CREATE INDEX productpricename
 ON products (productname,product_price);
 
-CREATE INDEX customerdetails
-ON customers (customer_id,name)
+CREATE INDEX customerdetail
+ON customers (customer_id);
+
 
 CREATE INDEX customercity
-ON customers WHERE City='Mumbai'; 
-
-CREATE INDEX orderamount
-ON orders(order_id) WHERE totalamount>5000;
+ON customers (city);
 
 --Part 2
 
 --Basic Queries
 
-SELECT customerdetails 
-FROM customers USE INDEX(customerdetails);
+SELECT customer_id
+FROM customers USE INDEX(customerdetail);
 
 SELECT order_id FROM orders
 WHERE orderdate>= CURDATE()-INTERVAL 30 DAY;
@@ -92,12 +90,12 @@ GROUP BY category;
 
 --Filtering and Conditions
 
-SELECT customerid,name 
+SELECT customer_id
 FROM customers
-USE INDEX customercity;
+WHERE City='Mumbai';
 
 SELECT order_id FROM orders
-USE INDEX orderamount;
+WHERE totalamount>5000;
 
 SELECT customerid_name FROM customers
 WHERE signupdate> '2024-01-01';
