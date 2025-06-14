@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class StudentApp {
 	public static void main(String[] a) {
-		Scanner input=new Scanner(System.in);
+		Scanner scanner=new Scanner(System.in);
 		System.out.println("How many students do you want to enter");
-		int number=input.nextInt();
+		int number=scanner.nextInt();
 		Student obj[] = new Student[number];
 		for (int i=0;i<number;i++) {
 			obj[i]=new Student();
@@ -14,7 +14,7 @@ public class StudentApp {
 		}
 		for (int j=0;j<number;j++)
 			obj[j].PrintReportCard(j);
-		input.close();
+		scanner.close();
 	}
 	
 }
