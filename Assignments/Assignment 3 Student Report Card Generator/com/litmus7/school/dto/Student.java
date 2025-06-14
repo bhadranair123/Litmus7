@@ -2,28 +2,28 @@ package com.litmus7.school.dto;
 import java.util.Scanner;
 
 public class Student {
-	String name;
-	int rollno;
-	int[] marks=new int[5];
+	private String name;
+	private int rollno;
+	private int[] marks=new int[5];
 	
 	public void InputDetails(){
-		Scanner input= new Scanner(System.in);
+		Scanner scanner= new Scanner(System.in);
 		System.out.println("Enter student Name: ");
-		name=input.nextLine();
+		name=scanner.nextLine();
 		System.out.println("Enter Roll number: ");
-		rollno=input.nextInt();
-		input.nextLine();
+		rollno=scanner.nextInt();
+		scanner.nextLine();
 		System.out.println("Enter marks in 5 subjects: ");
 		for(int i=0;i<5;i++) {
 			System.out.println("Subject"+(i+1)+": ");
-			marks[i]=input.nextInt();
-			input.nextLine();
+			marks[i]=scanner.nextInt();
+			scanner.nextLine();
 		}
 		
 	}
 	
 	
-	public int CalculateTotal(int marks[]){
+	private int CalculateTotal(int marks[]){
 		int sum=0;
 		for (int i=0;i<5;i++) {
 			sum+=marks[i];
@@ -32,13 +32,13 @@ public class Student {
 	}
 	
 	
-	public float CalculateAverage(){
+	private float CalculateAverage(){
 		float average=(float)(CalculateTotal(marks))/5;
 		return average;
 	}
 	
 	
-	public char GetGrade(int marks[]) {
+	private char GetGrade(int marks[]) {
 		float avg=CalculateAverage();
 		if (avg >= 90 )
 			return 'A';
