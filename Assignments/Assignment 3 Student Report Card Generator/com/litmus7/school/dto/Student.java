@@ -7,8 +7,18 @@ public class Student {
 	private int rollNo;
 	private int[] marks = new int[5];
 
-	public enum Grades {
-		A, B, C, D, E, F;
+	enum Grade {
+		A("Excellent"), B("Good"), C("Average"), D("Below Average"), F("Failed");
+
+		private final String description;
+
+		Grade(String description) {
+			this.description = description;
+		}
+
+		public String getDescription() {
+			return description;
+		}
 	}
 
 	public void inputDetails() {
@@ -40,46 +50,26 @@ public class Student {
 		return average;
 	}
 
-	private Grades getGrade(int marks[]) {
+	private Grade getGrade(int marks[]) {
 		float avg = calculateAverage();
 		if (avg >= 90)
-			return Grades.A;
+			return Grade.A;
 		else if (avg >= 75)
-			return Grades.B;
+			return Grade.B;
 		else if (avg >= 60)
-			return Grades.C;
+			return Grade.C;
 		else if (avg >= 50)
-			return Grades.D;
+			return Grade.D;
 		else
-			return Grades.F;
+			return Grade.F;
 
-	}
-
-	public void gradeChart(Grades grade) {
-		switch (grade) {
-		case A:
-			System.out.println("Excellent");
-			break;
-		case B:
-			System.out.println("Good");
-			break;
-		case C:
-			System.out.println("Average");
-			break;
-		case D:
-			System.out.println("Pass");
-			break;
-		case F:
-			System.out.println("Failed");
-			break;
-		}
 	}
 
 	public void printReportCard(int n) {
 		System.out.println("---Report Card of student " + (n + 1) + "---");
 		System.out.println("Name: " + name + "\nRoll Number: " + rollNo + "\nTotal Marks: " + calculateTotal(marks)
-				+ "\nAverage Marks: " + calculateAverage() + "\nGrade: " + getGrade(marks));
-		gradeChart(getGrade(marks));
+				+ "\nAverage Marks: " + calculateAverage() + "\nGrade: " + getGrade(marks) + " ("
+				+ getGrade(marks).getDescription() + ")");
 	}
 
 }
