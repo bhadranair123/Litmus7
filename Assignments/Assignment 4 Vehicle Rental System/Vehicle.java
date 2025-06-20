@@ -8,9 +8,9 @@ public class Vehicle {
 	protected double rentalPricePerDay;
 
 	protected Vehicle() {
-		this.brand = "Toyota";
-		this.model = "Corolla";
-		this.rentalPricePerDay = 1200;
+		this.brand = "Unknown";
+		this.model = "Unknown";
+		this.rentalPricePerDay = 0.0;
 	}
 
 	protected Vehicle(String brand, String model, double rentalPricePerDay) {
