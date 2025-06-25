@@ -18,12 +18,10 @@ public class Vehicle {
 		this.model = model;
 		this.rentalPricePerDay = rentalPricePerDay;
 	}
-	
-	
 
 	@Override
 	public String toString() {
-		return "Vehicle," +brand+"," +model+ "," + String.valueOf(rentalPricePerDay);
+		return "Vehicle," + brand + "," + model + "," + String.valueOf(rentalPricePerDay);
 	}
 
 	protected void inputDetails() {
