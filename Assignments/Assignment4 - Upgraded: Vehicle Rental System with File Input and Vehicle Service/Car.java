@@ -16,12 +16,11 @@ public class Car extends Vehicle {
 		this.numberOfDoors = numberOfDoors;
 		this.isAutomatic = isAutomatic;
 	}
-	
-	
 
 	@Override
 	public String toString() {
-		return "Car,"+brand+"," +model+ "," + String.valueOf(rentalPricePerDay) + "," + String.valueOf(numberOfDoors)+ String.valueOf(isAutomatic) ;
+		return "Car," + brand + "," + model + "," + String.valueOf(rentalPricePerDay) + ","
+				+ String.valueOf(numberOfDoors) + String.valueOf(isAutomatic);
 	}
 
 	@Override
