@@ -17,12 +17,11 @@ public class Bike extends Vehicle {
 		this.engineCapacity = engineCapacity;
 
 	}
-	
-	
 
 	@Override
 	public String toString() {
-		return "Bike,"+brand+"," +model+ "," + String.valueOf(rentalPricePerDay) + "," + String.valueOf(hasGear)+ String.valueOf(engineCapacity) ;
+		return "Bike," + brand + "," + model + "," + String.valueOf(rentalPricePerDay) + "," + String.valueOf(hasGear)
+				+ String.valueOf(engineCapacity);
 	}
 
 	@Override
