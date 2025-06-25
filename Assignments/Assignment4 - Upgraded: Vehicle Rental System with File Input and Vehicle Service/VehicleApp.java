@@ -21,10 +21,10 @@ public class VehicleApp {
 //		bike1.displayDetails();
 //		bike2.displayDetails();
 //		bike3.displayDetails();
-		
-		ServiceLayer service=new ServiceLayer();
+
+		ServiceLayer service = new ServiceLayer();
 		service.loadVehicles();
-		Bike bike4 =new Bike("Yamaha", "FZ", 800.0, true, 150);
+		Bike bike4 = new Bike("Yamaha", "FZ", 800.0, true, 150);
 		service.addNewVehicles(bike4);
 		service.displayAllVehicles();
 		service.vehicleSearch("Toyota");
