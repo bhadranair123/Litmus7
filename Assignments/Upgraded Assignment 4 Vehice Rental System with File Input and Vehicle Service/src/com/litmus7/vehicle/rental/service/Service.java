@@ -13,7 +13,6 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 
 public class Service {
-	
 
 	public List<Vehicle> loadVehicles() {
 		List<Vehicle> vehicleList = new ArrayList<>();
@@ -34,14 +33,15 @@ public class Service {
 
 				}
 			}
-		return vehicleList;
+			return vehicleList;
 		} catch (IOException e) {
 			System.out.println("Error reading Sample Vehicles file " + e.getMessage());
-		}return null;
+		}
+		return null;
 	}
 
 	public void addNewVehicles(Vehicle vehicle) {
-		List<Vehicle> vehicleList =loadVehicles();
+		List<Vehicle> vehicleList = loadVehicles();
 		vehicleList.add(vehicle);
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter("SampleVehicles.txt", true))) {
 			writer.write(vehicle.toString());
@@ -53,16 +53,16 @@ public class Service {
 	}
 
 	public void displayAllVehicles() {
-		List<Vehicle> vehicleList =loadVehicles();
+		List<Vehicle> vehicleList = loadVehicles();
 		for (Vehicle vehicle : vehicleList) {
 			System.out.println(vehicle);
 		}
 	}
 
 	public void vehicleSearch(String name) {
-		List<Vehicle> vehicleList =loadVehicles();
+		List<Vehicle> vehicleList = loadVehicles();
 		for (Vehicle vehicle : vehicleList)
-			if ((vehicle.brand).equals(name) || (vehicle.model).equals(name)) {
+			if ((vehicle.getBrand()).equals(name) || (vehicle.getModel()).equals(name)) {
 				System.out.println("Vehicle found: " + vehicle);
 				return;
 			}
@@ -72,10 +72,10 @@ public class Service {
 	}
 
 	public double totalRentalPrice() {
-		List<Vehicle> vehicleList =loadVehicles();
+		List<Vehicle> vehicleList = loadVehicles();
 		double sum = 0;
 		for (Vehicle vehicle : vehicleList)
-			sum += vehicle.rentalPricePerDay;
+			sum += vehicle.getRentalPricePerDay();
 		System.out.println("Total rental price: ");
 		return sum;
 	}

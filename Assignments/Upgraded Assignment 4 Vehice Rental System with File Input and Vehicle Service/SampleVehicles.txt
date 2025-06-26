@@ -6,3 +6,4 @@ Car,Chevrolet,Malibu,55.0,4,true
 
 Bike,Yamaha,FZ,800.0,true,150
 Bike,Yamaha,FZ,800.0,true,150
+Bike,Yamaha,FZ,800.0,true,150
