@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.litmus7.vehicle.rental","l":"VehicleApp"}];updateSearchResults();
