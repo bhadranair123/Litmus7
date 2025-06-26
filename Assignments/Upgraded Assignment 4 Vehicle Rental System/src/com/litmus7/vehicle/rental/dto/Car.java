@@ -1,3 +1,4 @@
+package com.litmus7.vehicle.rental.dto;
 
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class Car extends Vehicle {
 
 	}
 
-	protected Car(String brand, String model, double rentalPricePerDay, int numberOfDoors, boolean isAutomatic) {
+	public Car(String brand, String model, double rentalPricePerDay, int numberOfDoors, boolean isAutomatic) {
 		super(brand, model, rentalPricePerDay);
 		this.numberOfDoors = numberOfDoors;
 		this.isAutomatic = isAutomatic;
@@ -20,7 +21,7 @@ public class Car extends Vehicle {
 	@Override
 	public String toString() {
 		return "Car," + brand + "," + model + "," + String.valueOf(rentalPricePerDay) + ","
-				+ String.valueOf(numberOfDoors) + String.valueOf(isAutomatic);
+				+ String.valueOf(numberOfDoors) + "," + String.valueOf(isAutomatic);
 	}
 
 	@Override

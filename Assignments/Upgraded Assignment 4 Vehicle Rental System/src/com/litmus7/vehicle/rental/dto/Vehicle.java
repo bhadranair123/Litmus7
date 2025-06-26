@@ -1,11 +1,12 @@
+package com.litmus7.vehicle.rental.dto;
 
 import java.util.Scanner;
 
 public class Vehicle {
 
-	protected String brand;
-	protected String model;
-	protected double rentalPricePerDay;
+	public String brand;
+	public String model;
+	public double rentalPricePerDay;
 
 	protected Vehicle() {
 		this.brand = "Unknown";
@@ -13,7 +14,7 @@ public class Vehicle {
 		this.rentalPricePerDay = 0.0;
 	}
 
-	protected Vehicle(String brand, String model, double rentalPricePerDay) {
+	public Vehicle(String brand, String model, double rentalPricePerDay) {
 		this.brand = brand;
 		this.model = model;
 		this.rentalPricePerDay = rentalPricePerDay;

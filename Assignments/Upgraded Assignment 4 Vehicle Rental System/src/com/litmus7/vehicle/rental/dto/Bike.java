@@ -1,3 +1,4 @@
+package com.litmus7.vehicle.rental.dto;
 
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class Bike extends Vehicle {
 
 	}
 
-	protected Bike(String brand, String model, double rentalPricePerDay, boolean hasGear, int engineCapacity) {
+	public Bike(String brand, String model, double rentalPricePerDay, boolean hasGear, int engineCapacity) {
 		super(brand, model, rentalPricePerDay);
 		this.hasGear = hasGear;
 		this.engineCapacity = engineCapacity;
@@ -21,7 +22,7 @@ public class Bike extends Vehicle {
 	@Override
 	public String toString() {
 		return "Bike," + brand + "," + model + "," + String.valueOf(rentalPricePerDay) + "," + String.valueOf(hasGear)
-				+ String.valueOf(engineCapacity);
+				+ "," + String.valueOf(engineCapacity);
 	}
 
 	@Override
