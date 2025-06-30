@@ -1,0 +1,6 @@
+com.litmus7.vehiclerental.controller
+com.litmus7.vehiclerental.dao
+com.litmus7.vehiclerental.dto
+com.litmus7.vehiclerental.exception
+com.litmus7.vehiclerental.service
+com.litmus7.vehiclerental.ui
