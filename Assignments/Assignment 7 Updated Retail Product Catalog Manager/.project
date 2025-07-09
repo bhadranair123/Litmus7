@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Retail Product Catalog Manager</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>lib/mysql-connector-j-8.2.0.jar</name>
+			<type>1</type>
+			<location>C:/Users/bhadr/Downloads/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0.jar</location>
+		</link>
+		<link>
+			<name>src/db.properties</name>
+			<type>1</type>
+			<location>C:/Users/bhadr/Downloads/db.properties</location>
+		</link>
+	</linkedResources>
+</projectDescription>
